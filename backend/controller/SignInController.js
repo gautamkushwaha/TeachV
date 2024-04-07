@@ -1,4 +1,5 @@
 import User from "../DB/models/user_model.js";
+import bcrypt from "bcrypt";
 
 export const SignInController = async (req, res) => {
   const { userName, userPass } = req.body.formData;
@@ -6,17 +7,19 @@ export const SignInController = async (req, res) => {
   try {
     const user = await User.findOne({ username: userName });
 
-    if (userPass === user.password) {
-      res.send({
-        userName: "true",
-        userPass: "true",
-      });
-    } else {
-      res.send({
-        userName: "true", 
-        userPass: "false",
-      });
-    }
+    bcrypt.compare(userPass, user.password, function (err, result) {
+      if (result) {
+        res.send({
+          userName: "true",
+          userPass: "true",
+        });
+      } else {
+        res.send({
+          userName: "true",
+          userPass: "false",
+        });
+      }
+    });
 
     if (!user) {
       res.send({ userName: "false" });
