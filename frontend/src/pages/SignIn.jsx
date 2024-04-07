@@ -64,6 +64,7 @@ const SignIn = () => {
           required
         />
         <button type="submit">Submit</button>
+        <button >Forgot Password !</button>
         {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
 
       </form>
