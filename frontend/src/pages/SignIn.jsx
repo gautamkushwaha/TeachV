@@ -66,7 +66,6 @@ const SignIn = () => {
         <button type="submit">Submit</button>
         <button className="bg-indigo-200">Forgot Password !!</button>
         {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
-
       </form>
     </>
   );
