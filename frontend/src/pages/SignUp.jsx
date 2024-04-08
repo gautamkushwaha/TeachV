@@ -50,12 +50,13 @@ const SignUp = () => {
   };
 
   return (
-    <div>
-      <h2>Signup Form</h2>
+    <div className="grid place-content-center">
+      <h2 className="text-2xl flex my-7 mx-[15%] underline">Signup Form</h2>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="text-xl">
           Full Name:
           <input
+            className="m-3 border border-black"
             type="text"
             name="fullname"
             value={formData.fullname}
@@ -64,9 +65,10 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           Phone:
           <input
+            className="m-3 border border-black"
             type="tel"
             name="phone"
             value={formData.phone}
@@ -75,9 +77,10 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           Email:
           <input
+            className="m-3 border border-black"
             type="email"
             name="email"
             value={formData.email}
@@ -86,9 +89,10 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           Password:
           <input
+            className="m-3 border border-black"
             type="password"
             name="password"
             value={formData.password}
@@ -97,9 +101,10 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           Confirm Password:
           <input
+            className="m-3 border border-black"
             type="password"
             name="confirmPassword"
             value={formData.confirmPassword}
@@ -108,9 +113,9 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           College:
-          <input
+          <input className="m-3 border border-black"
             type="text"
             name="college"
             value={formData.college}
@@ -119,9 +124,10 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="text-xl">
           Place:
           <input
+            className="m-3 border border-black"
             type="text"
             name="place"
             value={formData.place}
@@ -130,7 +136,7 @@ const SignUp = () => {
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button className="my-8 mx-[20%] text-lg bg-indigo-500 px-3 py-2 rounded" type="submit">Submit</button>
       </form>
     </div>
   );

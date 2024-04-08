@@ -44,29 +44,39 @@ const SignIn = () => {
 
   return (
     <>
-      <form onSubmit={handelSubmit}>
-        <h1>Sign In</h1>
-        <h4>Email/Username</h4>
-        <input
-          type="text"
-          name="userName"
-          value={formData.userName}
-          onChange={handleChange}
-          placeholder="Enter email/password"
-          required
-        />
-        <h4>Password</h4>
-        <input
-          type="password"
-          name="userPass"
-          value={formData.userPass}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Submit</button>
-        <button className="bg-indigo-200">Forgot Password !</button>
-        {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
+      <form className="grid place-content-center" onSubmit={handelSubmit}>
+        <h1 className="text-3xl underline mx-[25%] my-7">Sign In</h1>
+        <label className="text-xl">
+          Email/Username:
+          <input
+            className="border border-black p-0.5 m-3"
+            type="text"
+            name="userName"
+            value={formData.userName}
+            onChange={handleChange}
+            placeholder="Enter email/password"
+            required
+          />
+        </label>
+        <label className="text-xl">
+          Password:
+          <input
+            className="border border-black p-0.5 m-3"
+            type="password"
+            name="userPass"
+            value={formData.userPass}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
+        <button className="font-medium bg-indigo-500 p-1 m-1 w-15 rounded" type="submit">
+          Submit
+        </button>
+        <button className="font-medium bg-indigo-500 p-1 m-1 rounded">
+          Forgot Password !
+        </button>
+        {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
       </form>
     </>
   );
