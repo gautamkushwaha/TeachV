@@ -2,6 +2,7 @@ import express from "express";
 import ConnectDB from "./DB/ConnectDB.js";
 import SignUpRouter from "./routers/SignupRoute.js";
 import SignInRouter from "./routers/SigninRoute.js";
+import ForgotPasswordRouter from "./routers/ForgotPasswordRouter.js";
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,8 @@ app.use(express.json());
 
 app.use("/api/SignUp", SignUpRouter);
 app.use("/api/SignIn", SignInRouter);
+app.use("/api/ForgotPassword",ForgotPasswordRouter );
+
 
 //database connection
 ConnectDB();
