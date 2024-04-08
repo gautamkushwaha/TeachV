@@ -3,6 +3,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Home from "./pages/Home";
 import StudentDash from "./pages/StudentDash";
+import ForgotPassword from "./pages/ForgotPassword";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<Home />} />
         <Route path="/studentdashboard" element={<StudentDash />} />
+        <Route path="/forgotpassword" element={<ForgotPassword/>} />
       </Routes>
     </BrowserRouter>
   );
