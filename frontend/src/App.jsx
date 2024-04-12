@@ -5,8 +5,12 @@ import Home from "./pages/Home";
 import StudentDash from "./pages/StudentDash";
 import ForgotPassword from "./pages/ForgotPassword";
 
+
 const App = () => {
-  return (
+  return ( 
+
+
+
     <BrowserRouter>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
@@ -16,6 +20,7 @@ const App = () => {
         <Route path="/forgotpassword" element={<ForgotPassword/>} />
       </Routes>
     </BrowserRouter>
+
   );
 };
 export default App;

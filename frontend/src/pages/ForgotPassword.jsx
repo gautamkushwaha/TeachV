@@ -11,7 +11,7 @@ const ForgotPassword = () => {
         otp:"",
     })
 
-    const handelChange = (e)=>{
+    const handelChange = (e)=>{ 
         const {name,value} = e.target;
         setFormdata({...formData,[name]:value})
     }
@@ -30,7 +30,7 @@ const ForgotPassword = () => {
 
         }
         else{
-            console.log("enter email");
+            // console.log("enter email");
             setErrorMessage("enter email!");
         }
     }

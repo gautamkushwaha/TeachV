@@ -40,7 +40,7 @@ const SignUp = () => {
         password: "",
         confirmPassword: "",
         college: "",
-        place: "",
+        place: "", 
       });
 
       navigate("/signin");
