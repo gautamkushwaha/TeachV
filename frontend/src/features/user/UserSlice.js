@@ -10,9 +10,8 @@ export const userSlice = createSlice({
     initialState,
     reducers : {
         setUsermail : (state,action)=>{
-
             state.useremail = action.payload;
-
+            
         },
     },
 })

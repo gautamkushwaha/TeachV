@@ -29,7 +29,7 @@ const SignIn = () => {
 
       if (userName === "true" && userPass === "true") {
         // Successful login
-        console.log("User logged in successfully");
+
         navigate("/studentdashboard");
       } else if (userName === "true" && userPass === "false") {
         // Incorrect password

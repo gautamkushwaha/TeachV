@@ -25,7 +25,7 @@ const EnterEmail = () => {
     const res = await axios.post("/api/ForgotPassword/email",{
       formData
     });
-    console.log(res);
+
     navigate("/ForgotPassword/otp");
 
 
