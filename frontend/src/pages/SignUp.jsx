@@ -34,7 +34,7 @@ const SignUp = () => {
 
       // Reset form after submission
       setFormData({
-        fullname: "",
+        fullname: "", 
         phone: "",
         email: "",
         password: "",

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import {useSelector} from 'react-redux';
+
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -9,11 +9,8 @@ const SignIn = () => {
     userPass: "",
   });
 
-  const {username} = useSelector((state)=>state.user);
-  console.log(username);
-
   const navigate = useNavigate();
- 
+
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
@@ -46,11 +43,10 @@ const SignIn = () => {
     }
   };
 
-  const handelForgotbtn = ()=>{
+  const handelForgotbtn = () => {
     console.log("hello");
-    navigate("/forgotpassword")
-  }
-
+    navigate("/forgotpassword");
+  };
 
   return (
     <>
@@ -88,11 +84,12 @@ const SignIn = () => {
         {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
       </form>
 
-      <button className="m-1 bg-indigo-500 rounded text-lg font-medium" onClick={handelForgotbtn} >
-          Forgot Password !
-        </button >
-       
-
+      <button
+        className="m-1 bg-indigo-500 rounded text-lg font-medium"
+        onClick={handelForgotbtn}
+      >
+        Forgot Password !
+      </button>
     </>
   );
 };

@@ -1,9 +1,10 @@
 import express from "express";
-import { ForgotPasswordController } from "../controller/ForgotPasswordController.js";
+import FPass_Email from "../controller/ForgotPassword/FPass_Email.js";
+
 
 
 const ForgotPasswordRouter = express.Router();
 
-ForgotPasswordRouter.post("",ForgotPasswordController);
+ForgotPasswordRouter.post("/email",FPass_Email);
 
 export default ForgotPasswordRouter;
