@@ -30,34 +30,45 @@ const ForgotPassword = () => {
 
         }
         else{
-            console.log("enter email");
+            console.log("Enter email");
             setErrorMessage("enter email!");
         }
     }
 
   
   
-    return ( <>
+    return (
+      <>
+        <form className="grid place-content-center">
+          <h1 className="text-2xl font-semibold underline my-5 grid place-content-center">
+            Forgot Password
+          </h1>
+          <container className="flex my-5">
+            <h3>Email:</h3>
+            <input
+              className="border border-black mx-5 "
+              type="email"
+              value={formData.email}
+              name="email"
+              required
+              onChange={handelChange}
+            />
+          </container>
+          <button
+            className="border font-medium border-black rounded-xl bg-indigo-400 p-1"
+            onClick={handelOtp}
+          >
+            get verification code
+          </button>
+          <input type="text" />
+        </form>
 
-    <form >
-
-        <h3>Email</h3>
-        <input type="email" value={formData.email} name="email" required onChange={handelChange}/>
-        <button onClick={handelOtp} >get verification code</button>
-
-        <input type="text" />
-
-
-    </form>
-
-    {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
-
-        
-        
-        
-        </>
-
-
-  )
+        {errorMessage && (
+          <div className="grid place-content-center" style={{ color: "red" }}>
+            {errorMessage}
+          </div>
+        )}
+      </>
+    );
 }
 export default ForgotPassword
