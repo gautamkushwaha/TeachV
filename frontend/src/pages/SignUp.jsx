@@ -34,13 +34,13 @@ const SignUp = () => {
 
       // Reset form after submission
       setFormData({
-        fullname: "",
+        fullname: "", 
         phone: "",
         email: "",
         password: "",
         confirmPassword: "",
         college: "",
-        place: "",
+        place: "", 
       });
 
       navigate("/signin");

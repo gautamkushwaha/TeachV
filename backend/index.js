@@ -5,7 +5,7 @@ import SignInRouter from "./routers/SigninRoute.js";
 import ForgotPasswordRouter from "./routers/ForgotPasswordRouter.js";
 
 const app = express();
-const port = 3000;
+const port = 3000; 
 
 // middleware
 
@@ -15,7 +15,8 @@ app.use(express.json());
 
 app.use("/api/SignUp", SignUpRouter);
 app.use("/api/SignIn", SignInRouter);
-app.use("/api/ForgotPassword",ForgotPasswordRouter );
+app.use("/api/ForgotPassword",ForgotPasswordRouter);
+
 
 
 //database connection

@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
+
 const SignIn = () => {
   const [formData, setFormData] = useState({
     userName: "",
@@ -28,7 +29,7 @@ const SignIn = () => {
 
       if (userName === "true" && userPass === "true") {
         // Successful login
-        console.log("User logged in successfully");
+
         navigate("/studentdashboard");
       } else if (userName === "true" && userPass === "false") {
         // Incorrect password
@@ -40,6 +41,11 @@ const SignIn = () => {
     } catch (error) {
       console.error("Error occurred:", error);
     }
+  };
+
+  const handelForgotbtn = () => {
+    console.log("hello");
+    navigate("/forgotpassword");
   };
 
   return (
@@ -75,11 +81,15 @@ const SignIn = () => {
         >
           Submit
         </button>
-        <button className="m-1 bg-indigo-500 rounded text-lg font-medium">
-          Forgot Password !
-        </button>
         {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
       </form>
+
+      <button
+        className="m-1 bg-indigo-500 rounded text-lg font-medium"
+        onClick={handelForgotbtn}
+      >
+        Forgot Password !
+      </button>
     </>
   );
 };
