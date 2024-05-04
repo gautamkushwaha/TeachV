@@ -6,14 +6,16 @@ import StudentDash from "./pages/StudentDash";
 import EnterEmail from "./pages/forgotPassword/EnterEmail";
 import EnterPassword from "./pages/forgotPassword/EnterPassword";
 import EnterOtp from "./pages/forgotPassword/EnterOtp";
+import Navbar from "./Components/Navbar/navbar";
+import Footer from "./Components/Footer/footer";
 
 
 const App = () => {
   return ( 
 
 
-
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
@@ -25,6 +27,7 @@ const App = () => {
 
 
       </Routes>
+      <Footer/>
     </BrowserRouter>
 
   );
