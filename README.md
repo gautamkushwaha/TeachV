@@ -3,8 +3,8 @@
 This Repo is Officially Managed & Developed by Team containing: 
 1. Gautam kushwaha
 2. Raviteja
-3. Harsh
-4. 
+3. Harsha
+4. dilleshwara rao
 
 
 ## Note for Developers
