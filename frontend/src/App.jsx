@@ -8,6 +8,7 @@ import EnterPassword from "./pages/forgotPassword/EnterPassword";
 import EnterOtp from "./pages/forgotPassword/EnterOtp";
 import Navbar from "./Components/Navbar/navbar";
 import Footer from "./Components/Footer/footer";
+import AddCourse from "./Components/Admin/addCourse";
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
     <BrowserRouter>
     <Navbar/>
       <Routes>
+      <Route path="/addCourse" element={<AddCourse />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/" element={<Home />} />
