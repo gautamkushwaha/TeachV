@@ -1,31 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import MyButton from "./MyButton";
 
 const HeroSection = () => {
   return (
-    <div className=" h-[672px]"
-    style={{
-        backgroundImage: `url("public/hero.png")`, // Specify the path to your image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-
-      <div className="container  my-[-100px] mx-auto flex flex-col  md:flex-row items-center">
-        {/* Column 1 */}
-        <div className=" mt-[192px]  ml-[207px] ">
-          <h1 className="  text-white text-[62px] font-semibold leading-tight mb-4 mx-auto md:mx-[0px]  w-[100%] h-[180]">
-          Building vision,
-          <br></br>
-Shaping the future
+    <section className="self-stretch flex flex-col items-start justify-start pt-[3px] px-0 pb-[194px] box-border relative gap-[89px] max-w-full text-left text-45xl text-white font-poppins mq750:gap-[44px] mq750:pt-5 mq750:pb-[126px] mq750:box-border mq450:gap-[22px]">
+      <img
+        className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
+        alt=""
+        src="/screenshot-20240401-154938-1@2x.png"
+      />
+      
+      <div className="w-[1051px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
+        <div className="flex flex-col items-start justify-start gap-[30px] max-w-full">
+          <h1 className="m-0 h-[141px] relative text-inherit capitalize font-bold font-inherit inline-block z-[1] mq1050:text-32xl mq450:text-19xl">
+            <p className="m-0">building vision,</p>
+            <p className="m-0">shaping the future</p>
           </h1>
-          <p className="text-white text-[24px] w-[80%] md:w-[85%] mx-auto md:mx-[0px] mb-4 ">
-            Start learning with Edpark courses
-          </p>
-          <button className="bg-orange-500 text-white rounded-full px-4 py-2">Get Started</button>
+          <div className="flex flex-col items-start justify-start gap-[13px] max-w-full text-5xl">
+            <div className="relative capitalize pt-[17px]">
+              start learning with edPark’s free courses
+            </div>
+            <MyButton getStarted="get started" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
