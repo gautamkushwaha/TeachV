@@ -9,6 +9,8 @@ const SignIn = () => {
     userPass: "",
   });
 
+  
+
   const navigate = useNavigate();
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -45,7 +47,7 @@ const SignIn = () => {
 
   const handelForgotbtn = () => {
     console.log("hello");
-    navigate("/forgotpassword");
+    navigate("/forgotpassword/email");
   };
 
   return (
