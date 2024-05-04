@@ -12,7 +12,7 @@ export const SignUpController = async (req, res) => {
       // Store hash in your password DB.
 
       const hashedPassword = hash;
-
+      console.log(` signUp hash ${hash}`);
 
 
       try {

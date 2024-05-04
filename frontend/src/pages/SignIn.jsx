@@ -2,11 +2,14 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
+
 const SignIn = () => {
   const [formData, setFormData] = useState({
     userName: "",
     userPass: "",
   });
+
+  
 
   const navigate = useNavigate();
 
@@ -28,7 +31,7 @@ const SignIn = () => {
 
       if (userName === "true" && userPass === "true") {
         // Successful login
-        console.log("User logged in successfully");
+
         navigate("/studentdashboard");
       } else if (userName === "true" && userPass === "false") {
         // Incorrect password
@@ -42,32 +45,53 @@ const SignIn = () => {
     }
   };
 
+  const handelForgotbtn = () => {
+    console.log("hello");
+    navigate("/forgotpassword/email");
+  };
+
   return (
     <>
-      <form onSubmit={handelSubmit}>
-        <h1>Sign In</h1>
-        <h4>Email/Username</h4>
-        <input
-          type="text"
-          name="userName"
-          value={formData.userName}
-          onChange={handleChange}
-          placeholder="Enter email/password"
-          required
-        />
-        <h4>Password</h4>
-        <input
-          type="password"
-          name="userPass"
-          value={formData.userPass}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Submit</button>
-        <button className="bg-indigo-200">Forgot Password !!</button>
+      <form className="grid place-content-center" onSubmit={handelSubmit}>
+        <h1 className="mx-[30%] underline text-3xl my-7">Sign In</h1>
+        <label className="text-xl">
+          Email/Username:
+          <input
+            className="m-3 border border-black p-1 rounded-sm"
+            type="text"
+            name="userName"
+            value={formData.userName}
+            onChange={handleChange}
+            placeholder="Enter email/password"
+            required
+          />
+        </label>
+        <label className="text-xl">
+          Password:
+          <input
+            className="m-3 border border-black p-1 rounded-sm"
+            type="password"
+            name="userPass"
+            value={formData.userPass}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <button
+          className="m-1 bg-indigo-500 rounded text-lg font-medium"
+          type="submit"
+        >
+          Submit
+        </button>
         {errorMessage && <div style={{ color: "red" }}>{errorMessage}</div>}
-
       </form>
+
+      <button
+        className="m-1 bg-indigo-500 rounded text-lg font-medium"
+        onClick={handelForgotbtn}
+      >
+        Forgot Password !
+      </button>
     </>
   );
 };

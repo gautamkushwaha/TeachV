@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 
 export const SignInController = async (req, res) => {
   const { userName, userPass } = req.body.formData;
-
+ 
   try {
     const user = await User.findOne({ username: userName });
 
