@@ -16,6 +16,7 @@ import Fullblog from "./Components/Blog/fullblog";
 import Mycourses from "./Components/Mycourses/mycourses";
 import Myprojects from "./Components/Mycourses/myprojects";
 import Myblog from "./Components/Mycourses/MYBLOG";
+import AddCourse from "./Components/Admin/addCourse";
 
 const App = () => {
   return ( 
@@ -26,6 +27,8 @@ const App = () => {
       <Routes>
 
         {/* Temporary pages */}
+      <Route path="/addCourse" element={<AddCourse />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/studentdashboard" element={<StudentDash />} />
