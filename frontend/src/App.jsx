@@ -19,7 +19,6 @@ import Myblog from "./Components/Mycourses/MYBLOG";
 import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
 
-const App = () => {
 
 
 
