@@ -17,8 +17,14 @@ import Mycourses from "./Components/Mycourses/mycourses";
 import Myprojects from "./Components/Mycourses/myprojects";
 import Myblog from "./Components/Mycourses/MYBLOG";
 import AddCourse from "./Components/Admin/addCourse";
+import GetCourses from "./pages/GetCourses";
 
 const App = () => {
+
+
+
+
+const App = () => { 
   return ( 
 
 
@@ -48,6 +54,8 @@ const App = () => {
         <Route path="/mycourses" element={<Mycourses/>}/>
         <Route path="/myprojects" element={<Myprojects/>}/>
         <Route path="/myblog" element={<Myblog/>}/>
+
+        <Route path="/Courses" element={<GetCourses/>} />
 
       </Routes>
       <Footer/>
