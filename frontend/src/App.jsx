@@ -9,9 +9,12 @@ import EnterOtp from "./pages/forgotPassword/EnterOtp";
 import Navbar from "./Components/Navbar/navbar";
 import Footer from "./Components/Footer/footer";
 import AddCourse from "./Components/Admin/addCourse";
+import GetCourses from "./pages/GetCourses";
 
 
-const App = () => {
+
+
+const App = () => { 
   return ( 
 
 
@@ -26,6 +29,8 @@ const App = () => {
         <Route path="/ForgotPassword/Email" element={<EnterEmail/>} />
         <Route path="/ForgotPassword/Password" element={<EnterPassword/>} />
         <Route path="/ForgotPassword/otp" element={<EnterOtp/>} />
+
+        <Route path="/Courses" element={<GetCourses/>} />
 
 
       </Routes>
