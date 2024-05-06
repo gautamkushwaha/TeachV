@@ -9,12 +9,12 @@ const FrameComponent2 = () => {
         </h3>
         <div className="self-stretch grid flex-row items-start justify-start gap-[47.5px] max-w-full grid-cols-[repeat(3,_minmax(286px,_1fr))] text-5xl font-inter mq750:gap-[24px] mq750:grid-cols-[minmax(286px,_1fr)] mq1050:justify-center mq1050:grid-cols-[repeat(2,_minmax(286px,_497px))]">
           <FrameComponent3
-            rectangle100="/blog/ai-ml.png"
+            rectangle100="/rectangle-100@2x.png"
             aIML={`aI & mL`}
             revolutionizeYourBusiness="revolutionize your business with our aI solutions"
           />
           <FrameComponent3
-            rectangle100="/blog/ar-vr.png"
+            rectangle100="/rectangle-101@2x.png"
             aIML={`AR & VR`}
             revolutionizeYourBusiness={`transform your reality with aR & VR solutions`}
             propMinWidth="94px"
@@ -25,7 +25,7 @@ const FrameComponent2 = () => {
                 className="h-[281px] flex-1 relative max-w-full overflow-hidden object-cover"
                 loading="lazy"
                 alt=""
-                src="/blog/cloud.png"
+                src="/rectangle-102@2x.png"
               />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start gap-[15px]">

@@ -1,11 +1,9 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react';
-import { useNavigate,Link } from "react-router-dom";
+import { useEffect, useState } from 'react'
 // import React from 'react'
 
 const GetCourses =  () => {
 
-  const navigate = useNavigate();
   const [Courses,SetCourses] = useState([]);
 
   const getCourses = async ()=>{
@@ -50,9 +48,22 @@ useEffect(()=>{
               </div>
             </div>
 
+
             <h3>{ele.courseContent}</h3>
           </div>
         );
+
+         <img src={ele.imgurl} alt="" />
+         
+         <h3>{ele.topic}</h3>
+         <h3>{ele.description}</h3>
+         <h3>{ele.person}</h3>
+         <h3>{ele.linkedin}</h3>
+         <h3>{ele.courseContent}</h3>
+
+        </div>
+        )
+
       })
     }
     

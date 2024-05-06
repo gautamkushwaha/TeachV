@@ -23,6 +23,10 @@ import About from "./new-Components/aboutus";
 import Registration from "./new-Components/signup";
 
 
+
+
+
+
 const App = () => { 
   return ( 
 
@@ -33,7 +37,7 @@ const App = () => {
 
         {/* Temporary pages */}
       <Route path="/addCourse" element={<AddCourse />} />
-        
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/studentdashboard" element={<StudentDash />} />
@@ -58,10 +62,13 @@ const App = () => {
         <Route path='/Courses/:id' element={<CoursePage/>}/>
 
 
-        {/* New Components */}
+
+       
+
+
+ {/* New Components */}
         <Route path="/about" element={<About/>}/>
         <Route path="/registration" element={<Registration/>}/>
-
       </Routes>
       {/* <Footer/> */}
     </BrowserRouter>

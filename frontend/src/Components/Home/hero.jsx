@@ -6,7 +6,7 @@ const HeroSection = () => {
       <img
         className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px] max-w-full overflow-hidden max-h-full object-cover"
         alt=""
-        src="/Home/hero.png"
+        src="/screenshot-20240401-154938-1@2x.png"
       />
       
       <div className="w-[1051px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">

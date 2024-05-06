@@ -64,22 +64,16 @@ const Footer = () => {
               E<span className="capitalize">mail address</span>
             </div>
             <div className="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-px text-sm">
-              <div className="flex-1 flex flex-col items-start justify-start">
-                <div className="self-stretch flex flex-col items-start justify-start py-0 pr-0 pl-2.5">
-                  <input type="text" 
-                    className="w-[291px] h-[40px] relative box-border z-[1] border-[1.5px] border-solid border-white rounded-md "
-                  ></input>
+              <div className="flex-1 flex flex-col items-start justify-start gap-[3px]">
+                <div className="w-[291px] h-[50px] relative box-border z-[1] border-[1.5px] border-solid border-white" />
+                <div className="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-2.5">
                   <div className="flex-1 flex flex-row items-start justify-start gap-[9px] mq450:flex-wrap">
                     <div className="flex flex-col items-start justify-start pt-[7px] px-0 pb-0">
-                      <input className="relative box-border z-[1] border-[0.5px] border-solid border-white"
-                        type="checkbox"/>
+                      <div className="w-[7px] h-[7px] relative box-border z-[1] border-[0.5px] border-solid border-white" />
                     </div>
-                    <label
-                      for="subscribe"
-                      className="mt-1 flex-1 relative capitalize font-light inline-block min-w-[189px] z-[1]"
-                    >
+                    <div className="flex-1 relative capitalize font-light inline-block min-w-[189px] z-[1]">
                       yes subscribe me to your newsletter
-                    </label>
+                    </div>
                   </div>
                 </div>
               </div>

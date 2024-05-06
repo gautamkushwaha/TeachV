@@ -6,4 +6,4 @@ const CoursesRouter = express.Router();
 CoursesRouter.get("",GetCourses);
 
 
-export default CoursesRouter;
+export default CoursesRouter; 
