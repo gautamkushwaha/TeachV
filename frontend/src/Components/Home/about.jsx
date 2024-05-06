@@ -68,7 +68,7 @@ const FrameComponent6 = () => {
           className="h-[516px] flex-1 relative rounded-xl max-w-full overflow-hidden object-cover min-w-[425px] mq750:min-w-full"
           loading="lazy"
           alt=""
-          src="/whatsapp-image-20240329-at-1631-1@2x.png"
+          src="/Home/about.png"
         />
       </div>
     </section>
