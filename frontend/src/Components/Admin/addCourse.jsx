@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 // import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {
   getStorage,
@@ -43,7 +43,9 @@ const AddCourse = () => {
   };
 
   useEffect(()=>{
-    sendData();
+    if(imgdownloadURL && topic &&description&& person && linkedin && courseContent ){
+      sendData();
+    }
   },[imgdownloadURL])
 
   const sendData = async ()=>{
@@ -200,8 +202,9 @@ const AddCourse = () => {
           </label>
           <textarea
             id="courseContent"
-            value={courseContent}
-            onChange={(e) => setCourseContent(e.target.value.split("\n"))}
+            // value={courseContent}
+            // onChange={(e) => setCourseContent(e.target.value.split("\n"))}
+            value={courseContent.join(',')} onChange={handleInputChange}
             className="w-full py-2 px-3 border border-gray-300 rounded-md"
             rows="4"
           ></textarea>

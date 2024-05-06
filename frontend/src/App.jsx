@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Switch, Redirect, Routes } from 'react-router-dom';
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Home from "./pages/Home";
@@ -19,6 +20,7 @@ import Myblog from "./Components/Mycourses/MYBLOG";
 import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
 import CoursePage from "./pages/CoursePage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
 
@@ -28,11 +30,14 @@ import CoursePage from "./pages/CoursePage";
 const App = () => { 
   return ( 
 
-
-    <BrowserRouter>
+<>
+     <BrowserRouter>
     <Navbar/>
-      <Routes>
 
+
+      <Routes>
+  
+    
         {/* Temporary pages */}
       <Route path="/addCourse" element={<AddCourse />} />
         <Route path="/signup" element={<SignUp />} />
@@ -58,9 +63,30 @@ const App = () => {
 
         <Route path="/Courses" element={<GetCourses/>} />
         <Route path='/Courses/:id' element={<CoursePage/>}/>
-      </Routes>
+        <Route path="*" element={<NotFoundPage/>}/>
+
+        {/* <Route component={NotFoundPage} /> */}
+
+       
+
+      
+       
+
+
+          </Routes>
       <Footer/>
-    </BrowserRouter>
+
+
+
+
+
+
+
+
+     </BrowserRouter>
+
+</>
+
 
   );
 };
