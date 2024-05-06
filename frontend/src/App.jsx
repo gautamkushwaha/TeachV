@@ -21,10 +21,6 @@ import GetCourses from "./pages/GetCourses";
 import CoursePage from "./pages/CoursePage";
 
 
-
-
-
-
 const App = () => { 
   return ( 
 
