@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {
   getStorage,
@@ -25,7 +25,7 @@ const AddCourse = () => {
     setImage(e.target.files[0]);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here, send data to backend 
 
@@ -53,15 +53,15 @@ const AddCourse = () => {
       imgdownloadURL,topic,description,person,linkedin,courseContent
     });
       
+   
 
-  }
+  };
 
-  
  
 
 
 
-  const uploadFile = async (file) => {
+  const uploadFile =  (file) => {
     const storage = getStorage(app);
     const folder = "CourseImg/";
     const fileName = new Date().getTime() + file.name;
@@ -107,17 +107,22 @@ const AddCourse = () => {
             break;
         }
       },
-      () => {
+     async () => {
         // Upload completed successfully, now we can get the download URL
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+       await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log("DownloadURL - ", downloadURL);
-          SetimgdownloadURL(downloadURL);     
+          SetimgdownloadURL(downloadURL);
+        
         });
       }
     );
   };
 
-  
+
+  const handleInputChange = (e) => {
+    setCourseContent(e.target.value.split(',').map(str => str.trim()));
+    // console.log(courseContent);
+  };
 
 
 
