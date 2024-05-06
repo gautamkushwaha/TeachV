@@ -15,12 +15,12 @@ const FrameComponent4 = () => {
       <div className="self-stretch flex flex-row flex-wrap items-start justify-start pt-0 px-0 pb-2.5 box-border gap-[19px] max-w-full text-black">
         <div className="flex-1 flex flex-row items-start justify-start gap-[19px] min-w-[396px] max-w-full mq750:flex-wrap mq750:min-w-full">
           <FrameComponent5
-            screenshot862="/projects-courses/ai-ml.png"
+            screenshot862="/screenshot-86-2@2x.png"
             aIML={`aI & mL`}
             revolutionizeYourBusiness="revolutionize your business with our aI solutions"
           />
           <FrameComponent5
-            screenshot862="/projects-courses/ar-vr.png"
+            screenshot862="/screenshot-86-1@2x.png"
             aIML={`ar & vr`}
             revolutionizeYourBusiness={`transform your reality with aR & VR solutions`}
             propMinWidth="96px"
@@ -33,13 +33,13 @@ const FrameComponent4 = () => {
               className="self-stretch flex-1 relative rounded-mini max-w-full overflow-hidden max-h-full object-cover min-w-[192px] min-h-[415px] z-[1]"
               loading="lazy"
               alt=""
-              src="/projects-courses/data-science.png"
+              src="/screenshot-117-1@2x.png"
             />
             <img
               className="self-stretch flex-1 relative rounded-mini max-w-full overflow-hidden max-h-full object-cover min-w-[192px] min-h-[415px] z-[1]"
               loading="lazy"
               alt=""
-              src="/projects-courses/web-dev.png"
+              src="/screenshot-118-1@2x.png"
             />
           </div>
           <div className="self-stretch flex flex-col items-start justify-start gap-[5px] max-w-full">
