@@ -18,6 +18,8 @@ import Myprojects from "./Components/Mycourses/myprojects";
 import Myblog from "./Components/Mycourses/MYBLOG";
 import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
+import CoursePage from "./pages/CoursePage";
+
 
 const App = () => { 
   return ( 
@@ -29,7 +31,7 @@ const App = () => {
 
         {/* Temporary pages */}
       <Route path="/addCourse" element={<AddCourse />} />
-        <Route path="/signup" element={<SignUp />} />
+        
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/studentdashboard" element={<StudentDash />} />
@@ -51,6 +53,7 @@ const App = () => {
         <Route path="/myblog" element={<Myblog/>}/>
 
         <Route path="/Courses" element={<GetCourses/>} />
+        <Route path='/Courses/:id' element={<CoursePage/>}/>
 
       </Routes>
       <Footer/>

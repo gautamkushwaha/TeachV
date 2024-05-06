@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import {
   getStorage,
@@ -25,7 +25,7 @@ const AddCourse = () => {
     setImage(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission here, send data to backend 
 
@@ -38,25 +38,32 @@ const AddCourse = () => {
     //   courseContent,
     // });
 
-    uploadFile(image);
-    if (imgdownloadURL) {
-      axios.post("/api/addcourse",{
-        imgdownloadURL,topic,description,person,linkedin,courseContent
-      });
-      
-    }
-
-    else{
-      console.log("please wait the image is being uploaded");
-    }
+     uploadFile(image);
 
   };
 
+  useEffect(()=>{
+    if(imgdownloadURL){
+      sendData();
+    }
+  },[imgdownloadURL])
+
+  const sendData = async ()=>{
+
+   
+    axios.post("/api/addcourse",{
+      imgdownloadURL,topic,description,person,linkedin,courseContent
+    });
+      
+
+  }
+
+  
  
 
 
 
-  const uploadFile =  (file) => {
+  const uploadFile = async (file) => {
     const storage = getStorage(app);
     const folder = "CourseImg/";
     const fileName = new Date().getTime() + file.name;
@@ -102,16 +109,23 @@ const AddCourse = () => {
             break;
         }
       },
-     async () => {
+      () => {
         // Upload completed successfully, now we can get the download URL
-       await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log("DownloadURL - ", downloadURL);
-          SetimgdownloadURL(downloadURL);
-        
+          SetimgdownloadURL(downloadURL);     
         });
       }
     );
   };
+
+  const handleInputChange = (e) => {
+    setCourseContent(e.target.value.split(',').map(str => str.trim()));
+    // console.log(courseContent);
+  };
+
+  
+
 
 
 
@@ -188,8 +202,9 @@ const AddCourse = () => {
           </label>
           <textarea
             id="courseContent"
-            value={courseContent}
-            onChange={(e) => setCourseContent(e.target.value.split("\n"))}
+            // value={courseContent}
+            // onChange={(e) => {setCourseContent(e.target.value.split("\n")) ,console.log(courseContent); }}
+            value={courseContent.join(',')} onChange={handleInputChange}
             className="w-full py-2 px-3 border border-gray-300 rounded-md"
             rows="4"
           ></textarea>
