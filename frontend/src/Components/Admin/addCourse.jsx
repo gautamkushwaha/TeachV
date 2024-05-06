@@ -43,7 +43,9 @@ const AddCourse = () => {
   };
 
   useEffect(()=>{
-    sendData();
+    if(imgdownloadURL){
+      sendData();
+    }
   },[imgdownloadURL])
 
   const sendData = async ()=>{
@@ -115,6 +117,11 @@ const AddCourse = () => {
         });
       }
     );
+  };
+
+  const handleInputChange = (e) => {
+    setCourseContent(e.target.value.split(',').map(str => str.trim()));
+    // console.log(courseContent);
   };
 
   
@@ -195,8 +202,9 @@ const AddCourse = () => {
           </label>
           <textarea
             id="courseContent"
-            value={courseContent}
-            onChange={(e) => setCourseContent(e.target.value.split("\n"))}
+            // value={courseContent}
+            // onChange={(e) => {setCourseContent(e.target.value.split("\n")) ,console.log(courseContent); }}
+            value={courseContent.join(',')} onChange={handleInputChange}
             className="w-full py-2 px-3 border border-gray-300 rounded-md"
             rows="4"
           ></textarea>
