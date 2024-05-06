@@ -10,25 +10,25 @@ const FrameComponent = () => {
             className="h-[200px] w-[200px] relative object-cover min-h-[200px]"
             loading="lazy"
             alt=""
-            src="/rectangle-36@2x.png"
+            src="/sponsors/reebok.png"
           />
           <img
             className="h-[200px] w-[200px] relative object-cover min-h-[200px]"
             loading="lazy"
             alt=""
-            src="/rectangle-38@2x.png"
+            src="/sponsors/puma.png"
           />
           <img
             className="h-[200px] w-[200px] relative object-cover min-h-[200px]"
             loading="lazy"
             alt=""
-            src="/rectangle-43@2x.png"
+            src="/sponsors/playstation.png"
           />
           <img
             className="h-[200px] w-[200px] relative object-cover min-h-[200px]"
             loading="lazy"
             alt=""
-            src="/rectangle-37@2x.png"
+            src="/sponsors/tesla.png"
           />
         </div>
       </div>
