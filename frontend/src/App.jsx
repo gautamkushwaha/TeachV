@@ -8,7 +8,7 @@ import EnterPassword from "./pages/forgotPassword/EnterPassword";
 import EnterOtp from "./pages/forgotPassword/EnterOtp";
 import Navbar from "./Components/Navbar/navbar";
 import Footer from "./Components/Footer/footer";
-import Registration from "./Components/Registration/registration";
+// import Registration from "./Components/Registration/registration";
 import Webdev from "./Components/Courses/webdev";
 import Sponsers from "./Components/Collaborations/sponsers";
 import Blog from "./Components/Blog/blog";
@@ -19,6 +19,8 @@ import Myblog from "./Components/Mycourses/MYBLOG";
 import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
 import CoursePage from "./pages/CoursePage";
+import About from "./new-Components/aboutus";
+import Registration from "./new-Components/signup";
 
 
 const App = () => { 
@@ -26,7 +28,7 @@ const App = () => {
 
 
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Routes>
 
         {/* Temporary pages */}
@@ -41,7 +43,7 @@ const App = () => {
 
         {/* Need some changes */}
         <Route path="/" element={<Home />} />
-        <Route path="/registration" element={<Registration/>}/>
+        {/* <Route path="/registration" element={<Registration/>}/> */}
         <Route path="/courses/webdev" element={<Webdev/>}/>
         <Route path="/collaborations/sponsers" element={<Sponsers/>}/>
         <Route path="/blog" element={<Blog/>}/>
@@ -55,8 +57,13 @@ const App = () => {
         <Route path="/Courses" element={<GetCourses/>} />
         <Route path='/Courses/:id' element={<CoursePage/>}/>
 
+
+        {/* New Components */}
+        <Route path="/about" element={<About/>}/>
+        <Route path="/registration" element={<Registration/>}/>
+
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
 
   );
