@@ -1,15 +1,24 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useDispatch,useSelector } from "react-redux";
+import { setUsername,setIslogged } from "../features/user/UserSlice";
+
+
 
 
 const SignIn = () => {
+
+
   const [formData, setFormData] = useState({
     userName: "",
     userPass: "",
   });
 
+  const {username,isLogged} = useSelector((state) => state.user);
+
   
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
 
@@ -24,6 +33,14 @@ const SignIn = () => {
     e.preventDefault();
 
     try {
+
+      
+
+      // console.log(username,isLogged);
+
+
+      
+
       const response = await axios.post("/api/SignIn", { formData });
 
       //deconstructing parms from axios
@@ -31,8 +48,13 @@ const SignIn = () => {
 
       if (userName === "true" && userPass === "true") {
         // Successful login
+        console.log(isLogged);
+        dispatch(setUsername(formData.userName));
+        dispatch(setIslogged(true));
+        console.log(isLogged,username);
 
         navigate("/studentdashboard");
+        
       } else if (userName === "true" && userPass === "false") {
         // Incorrect password
         setErrorMessage("Incorrect password");

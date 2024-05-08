@@ -7,7 +7,7 @@ import {useNavigate} from "react-router"
 const EnterEmail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+ 
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormdata] = useState({
@@ -21,7 +21,10 @@ const EnterEmail = () => {
 
   const handelSubmit = async (e) => {
     e.preventDefault();
+
+    // setting the usename in store 
     dispatch(setUsermail(formData.email));
+
     const res = await axios.post("/api/ForgotPassword/email",{
       formData
     });

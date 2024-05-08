@@ -21,6 +21,15 @@ import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
 import CoursePage from "./pages/CoursePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CheckProfile from "./pages/CheckProfile";
+
+
+import { useDispatch, useSelector } from 'react-redux'
+
+
+
+
+
 
 
 
@@ -28,6 +37,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 
 const App = () => { 
+
+  const {isLogged} = useSelector((state)=>state.user)
+
+  
+  
+  
+
   return ( 
 
 <>
@@ -61,9 +77,13 @@ const App = () => {
         <Route path="/myprojects" element={<Myprojects/>}/>
         <Route path="/myblog" element={<Myblog/>}/>
 
-        <Route path="/Courses" element={<GetCourses/>} />
+        <Route path="/Courses" element={<GetCourses/>} /> 
         <Route path='/Courses/:id' element={<CoursePage/>}/>
         <Route path="*" element={<NotFoundPage/>}/>
+
+        {/* <Route path="/TestPath" element={Condition ? <MentroProfile/> : <StudentProfile/>} /> */}
+
+        <Route path="/profile" element={<CheckProfile/>}/>
 
         {/* <Route component={NotFoundPage} /> */}
 

@@ -7,9 +7,11 @@ import { useNavigate } from "react-router";
 
 const  EnterOtp = () => {
 
+  // getting the user name from store 
   const {useremail} = useSelector((state) => state.user);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
+ 
   const [errorMessage, setErrorMessage] = useState("");
 
 
