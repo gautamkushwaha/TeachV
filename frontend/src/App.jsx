@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Switch, Redirect, Routes } from 'react-router-dom';
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Home from "./pages/Home";
@@ -23,91 +22,68 @@ import CoursePage from "./pages/CoursePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckProfile from "./pages/CheckProfile";
 
+import { useSelector } from "react-redux";
+import AccessDenied from "./pages/AccessDenied";
 
-import { useDispatch, useSelector } from 'react-redux'
+const App = () => {
+  const { isLogged, userDetails } = useSelector((state) => state.user);
 
+  return (
+    <>
+      <BrowserRouter>
+        <Navbar />
 
+        <Routes>
+          {/* Temporary pages */}
 
+          {/* <Route path="/addCourse" element={<AddCourse />} /> */}
+          <Route
+            path="/addCourse"
+            element={
+              isLogged ? (
+                userDetails.isadmin ? (
+                  <AddCourse />
+                ) : (
+                  <AccessDenied />
+                )
+              ) : (
+                <SignIn />
+              )
+            }
+          />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/studentdashboard" element={<StudentDash />} />
+          <Route path="/ForgotPassword/Email" element={<EnterEmail />} />
+          <Route path="/ForgotPassword/Password" element={<EnterPassword />} />
+          <Route path="/ForgotPassword/otp" element={<EnterOtp />} />
 
+          {/* Need some changes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/courses/webdev" element={<Webdev />} />
+          <Route path="/collaborations/sponsers" element={<Sponsers />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/fullblog" element={<Fullblog />} />
 
+          {/* Wrong dimentions */}
+          <Route path="/mycourses" element={<Mycourses />} />
+          <Route path="/myprojects" element={<Myprojects />} />
+          <Route path="/myblog" element={<Myblog />} />
 
+          <Route path="/Courses" element={<GetCourses />} />
+          <Route path="/Courses/:id" element={<CoursePage />} />
+          <Route path="*" element={<NotFoundPage />} />
 
+          {/* <Route path="/TestPath" element={Condition ? <MentroProfile/> : <StudentProfile/>} /> */}
 
+          <Route path="/profile" element={<CheckProfile />} />
 
-
-
-const App = () => { 
-
-  const {isLogged} = useSelector((state)=>state.user)
-
-  
-  
-  
-
-  return ( 
-
-<>
-     <BrowserRouter>
-    <Navbar/>
-
-
-      <Routes>
-  
-    
-        {/* Temporary pages */}
-      <Route path="/addCourse" element={<AddCourse />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/studentdashboard" element={<StudentDash />} />
-        <Route path="/ForgotPassword/Email" element={<EnterEmail/>} />
-        <Route path="/ForgotPassword/Password" element={<EnterPassword/>} />
-        <Route path="/ForgotPassword/otp" element={<EnterOtp/>} />
-
-        {/* Need some changes */}
-        <Route path="/" element={<Home />} />
-        <Route path="/registration" element={<Registration/>}/>
-        <Route path="/courses/webdev" element={<Webdev/>}/>
-        <Route path="/collaborations/sponsers" element={<Sponsers/>}/>
-        <Route path="/blog" element={<Blog/>}/>
-        <Route path="/fullblog" element={<Fullblog/>}/>
-
-        {/* Wrong dimentions */}
-        <Route path="/mycourses" element={<Mycourses/>}/>
-        <Route path="/myprojects" element={<Myprojects/>}/>
-        <Route path="/myblog" element={<Myblog/>}/>
-
-        <Route path="/Courses" element={<GetCourses/>} /> 
-        <Route path='/Courses/:id' element={<CoursePage/>}/>
-        <Route path="*" element={<NotFoundPage/>}/>
-
-        {/* <Route path="/TestPath" element={Condition ? <MentroProfile/> : <StudentProfile/>} /> */}
-
-        <Route path="/profile" element={<CheckProfile/>}/>
-
-        {/* <Route component={NotFoundPage} /> */}
-
-       
-
-      
-       
-
-
-          </Routes>
-      <Footer/>
-
-
-
-
-
-
-
-
-     </BrowserRouter>
-
-</>
-
-
+          {/* <Route component={NotFoundPage} /> */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 };
 export default App;

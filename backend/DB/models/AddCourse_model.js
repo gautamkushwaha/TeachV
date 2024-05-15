@@ -9,7 +9,8 @@ const addcourseSchema = new mongoose.Schema({
 
     topic : {
         type : String,
-        required: true
+        required: true,
+        unique : true,
     },
 
     description : {

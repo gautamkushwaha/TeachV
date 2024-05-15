@@ -1,51 +1,41 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 // import React from 'react'
 
-const GetCourses =  () => {
+const GetCourses = () => {
+  const [Courses, SetCourses] = useState([]);
 
-  const [Courses,SetCourses] = useState([]);
+  const getCourses = async () => {
+    const res = await axios.get("/api/courses");
+    const NewData = res.data.Courses;
+    // console.log(NewData.Courses);
+    SetCourses(NewData);
+  };
 
-const getCourses = async ()=>{
-  
+  useEffect(() => {
+    getCourses();
+  }, []);
 
-  const res = await axios.get("/api/courses");
-  const NewData = res.data.Courses;
-  // console.log(NewData.Courses);
-  SetCourses(NewData)
-  
-}
-
-useEffect(()=>{
-  getCourses();
-},[])
-
-  return ( 
+  return (
     <>
-    
-   
-    {
-      Courses.map((ele)=>{
-        return(
-
+      {Courses.map((ele) => {
+        return (
           <div key={ele._id}>
+            <Link to={`/Courses/${ele._id}`}>
+              <img src={ele.imgurl} alt="" />
+            </Link>
 
-         <img src={ele.imgurl} alt="" />
-         
-         <h3>{ele.topic}</h3>
-         <h3>{ele.description}</h3>
-         <h3>{ele.person}</h3>
-         <h3>{ele.linkedin}</h3>
-         <h3>{ele.courseContent}</h3>
-
-        </div>
-        )
-      })
-    }
-    
-    
+            <h3>{ele.topic}</h3>
+            <h3>{ele.description}</h3>
+            <h3>{ele.person}</h3>
+            <h3>{ele.linkedin}</h3>
+            <h3>{ele.courseContent}</h3>
+          </div>
+        );
+      })}
     </>
-  )
-}
+  );
+};
 
 export default GetCourses;

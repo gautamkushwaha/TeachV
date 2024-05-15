@@ -3,8 +3,11 @@ import bcrypt from "bcrypt";
 
 export const SignInController = async (req, res) => {
   const { userName, userPass } = req.body.formData;
- 
+  
   try {
+
+    
+
     const user = await User.findOne({ username: userName });
 
     bcrypt.compare(userPass, user.password, function (err, result) {
@@ -12,6 +15,7 @@ export const SignInController = async (req, res) => {
         res.send({
           userName: "true",
           userPass: "true",
+          user,
         });
       } else {
         res.send({

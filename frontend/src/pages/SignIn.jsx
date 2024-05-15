@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch,useSelector } from "react-redux";
-import { setUsername,setIslogged } from "../features/user/UserSlice";
+import { setUsername,setIslogged,setUserDetails } from "../features/user/UserSlice";
 
 
 
@@ -10,12 +10,12 @@ import { setUsername,setIslogged } from "../features/user/UserSlice";
 const SignIn = () => {
 
 
-  const [formData, setFormData] = useState({
-    userName: "",
+  const [formData, setFormData] = useState({ 
+    userName: "", 
     userPass: "",
   });
 
-  const {username,isLogged} = useSelector((state) => state.user);
+  const {username,isLogged,userDetails} = useSelector((state) => state.user);
 
   
   const dispatch = useDispatch();
@@ -44,14 +44,22 @@ const SignIn = () => {
       const response = await axios.post("/api/SignIn", { formData });
 
       //deconstructing parms from axios
-      const { userName, userPass } = response.data;
+      const { userName, userPass , user } = response.data;
 
       if (userName === "true" && userPass === "true") {
         // Successful login
-        console.log(isLogged);
+
+        dispatch(setUserDetails(user));
+        // console.log("user dispatch sent");
+        // console.log(userDetails);
+
+        // console.log(userDetails.username);
+
+
+        // console.log(isLogged);
         dispatch(setUsername(formData.userName));
         dispatch(setIslogged(true));
-        console.log(isLogged,username);
+        // console.log(isLogged,username,user);
 
         navigate("/studentdashboard");
         

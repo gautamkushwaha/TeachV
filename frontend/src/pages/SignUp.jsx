@@ -13,7 +13,21 @@ const SignUp = () => {
     confirmPassword: "",
     college: "",
     place: "",
+  
   });
+
+
+
+  // const [selectedOption, setSelectedOption] = useState('');
+
+ 
+
+
+
+
+
+
+
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -41,11 +55,13 @@ const SignUp = () => {
         confirmPassword: "",
         college: "",
         place: "", 
+    selectedOption:"",
+
       });
 
       navigate("/signin");
     } else {
-      console.log("password do not match ");
+      console.log("password's do not match ");
     }
   };
 
@@ -136,8 +152,15 @@ const SignUp = () => {
           />
         </label>
         <br />
+        {/* <input type="radio" id="student" value={`student`} />
+        <input type="radio" id="mentor" value={`mentor`} /> */}
+
         <button className="my-8 mx-[20%] text-lg bg-indigo-500 px-3 py-2 rounded" type="submit">Submit</button>
+
       </form>
+
+        <h4>Are you a Admin ? </h4>
+
     </div>
   );
 };

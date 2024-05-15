@@ -1,38 +1,51 @@
-import  { useEffect } from 'react'
-import { useParams } from 'react-router';
-import axios from 'axios';
+import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import axios from "axios";
 
-const CoursePage =  () => {
+const CoursePage = () => {
+  const [Coursedata, SetCourseData] = useState();
 
-    const id = useParams();
+  const id = useParams();
 
-    useEffect( ()=>{
+  useEffect(() => {
+    getData();
+  }, []);
 
-       
+  const getData = async () => {
+    const res = await axios.post("/api/GetCourseById", {
+      id,
+    });
 
-        getData();
+    SetCourseData(res.data.course);
 
-    },[]);
-
-    const getData = async()=>{
-        const res = await axios.post("/api/GetCourseById",{
-            id
-           });
-
-           console.log(res);
-    }
-
+    // console.log(res);
+  };
 
   return (
-
     <>
-        <h1>courser page</h1>
+      <div>
+        <h1>{Coursedata?.topic}</h1>
+        <img src={Coursedata?.imgurl} alt="" />
+        <p>{Coursedata?.description}</p>
+        <h3>{Coursedata?.person}</h3>
+        <h3>{Coursedata?.linkedin}</h3>
+
+        <div>
+          <h2>This Course includes</h2>
+        </div>
+
+        <button>Join now for Free</button>
+
+        {Coursedata?.courseContent?.map((ele) => {
+          return (
+            <div key={ele}>
+              <h2>{ele}</h2>
+            </div>
+          );
+        })}
+      </div>
     </>
+  );
+};
 
-
-
-
-  )
-}
-
-export default CoursePage
+export default CoursePage;

@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 
 export const SignUpController = async (req, res) => {
   // console.log(req.body.formData);
-  const { fullname, phone, email, password, college, place } =
+  const { fullname, phone, email, password, college, place, accounttype } =
     req.body.formData;
 
     const saltRounds = 10;
@@ -16,14 +16,20 @@ export const SignUpController = async (req, res) => {
 
 
       try {
-        await User.create({
-          username: fullname,
-          phone,
-          email,
-          password:hashedPassword,
-          college,
-          place,
-        });
+
+        
+        
+
+          
+          await User.create({
+            username: fullname,
+            phone,
+            email,
+            password:hashedPassword,
+            college,
+            place,
+          });
+        
       } catch (error) {
         console.log(error);
       }

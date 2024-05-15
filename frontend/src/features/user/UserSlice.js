@@ -3,7 +3,13 @@ import {createSlice} from "@reduxjs/toolkit";
 const initialState ={
     username : "",
     useremail: "",
-    isLogged : false , 
+
+    userDetails : {
+        
+    },
+
+    isLogged :  false,
+    
 }
 
 export const userSlice = createSlice({
@@ -20,9 +26,19 @@ export const userSlice = createSlice({
             state.username = action.payload;
         },
 
+        setUserDetails : (state,action) =>{
+            console.log(action.payload);
+            state.userDetails = action.payload;
+            console.log("hello harsha");
+        },
+
         setIslogged : (state,action)=>{
             state.isLogged = action.payload;
         },
+
+       
+
+
 
 
 
@@ -31,7 +47,7 @@ export const userSlice = createSlice({
 
 // console.log(userSlice);
 
-export const {setUsermail,setUsername,setIslogged} = userSlice.actions;
+export const {setUsermail,setUsername,setIslogged,setUserDetails} = userSlice.actions;
 
 export default userSlice.reducer;
 
