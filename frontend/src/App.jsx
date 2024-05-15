@@ -30,6 +30,7 @@ import Mentor from "./new-Components/join/mentor";
 import Suppoter from "./new-Components/join/suppoter";
 import Volunteer from "./new-Components/join/volunteer";
 import Footer from "./new-Components/footer";
+import Nav from "./new-Components/nav";
 
 
 
@@ -79,6 +80,7 @@ const App = () => {
         <Route path="/join/suppoter" element={<Suppoter/>}/>
         <Route path="/join/volunteer" element={<Volunteer/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path="/nav" element={<Nav/>}/>
         {/* <Route path="/footer" element={<Footer/>}/> */}
       </Routes>
       {/* <Footer/> */}
