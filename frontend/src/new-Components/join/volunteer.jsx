@@ -1,5 +1,8 @@
+import Footer from "../footer";
+
 const volunteer = () => {
   return (
+    <>
     <div className="font-poppins mx-[9.5vw]">
       <h1 className="uppercase font-bold text-[2.75vw]">Volunteer</h1>
       <p className="-mt-[15px] capitalize text-[1.14vw]">
@@ -11,11 +14,11 @@ const volunteer = () => {
         a fantastic way to meet new people, gain valuable experience, and make a
         difference in the lives of others.
       </p>
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-[3%]">
         <img
           src="/join/volunteer.png"
           alt="mentoring"
-          className="w-[45vw] h-[63vh]"
+          className="w-[45vw] h-[66vh]"
         ></img>
         <div className="ml-[10%]">
           <h5>
@@ -47,7 +50,7 @@ const volunteer = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-[10vw] h-[6.5vh] bg-black text-white rounded-full mx-[25%]"
+              className="w-[10vw] h-[6.5vh] bg-black text-white rounded-full mx-[25%] mt-[5%]"
             >
               SUBMIT
             </button>
@@ -55,6 +58,8 @@ const volunteer = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 export default volunteer;

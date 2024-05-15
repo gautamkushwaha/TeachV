@@ -1,5 +1,8 @@
+import Footer from "../footer";
+
 const suppoter = () => {
-    return (
+  return (
+    <>
       <div className="font-poppins mx-[9.5vw]">
         <h1 className="uppercase font-bold text-[2.75vw]">supporter</h1>
         <p className="-mt-[15px] capitalize text-[1.14vw]">
@@ -14,9 +17,9 @@ const suppoter = () => {
           <img
             src="/join/suppoter.png"
             alt="mentoring"
-            className="w-[30vw] h-[65vh]"
+            className="w-[30vw] h-[75vh]"
           ></img>
-          <div className="ml-[10%]">
+          <div className="ml-[10%]  mt-[1%]">
             <h5>
               Fill out the quick form below.<br></br>
               <span className="text-[12px] font-light">
@@ -46,7 +49,7 @@ const suppoter = () => {
               ></textarea>
               <button
                 type="submit"
-                className="w-[10vw] h-[6.5vh] bg-black text-white rounded-full mx-[25%]"
+                className="w-[10vw] h-[6.5vh] bg-black text-white rounded-full mx-[25%] mt-[5%]"
               >
                 SUBMIT
               </button>
@@ -54,6 +57,8 @@ const suppoter = () => {
           </div>
         </div>
       </div>
-    );
-}
+      <Footer />
+    </>
+  );
+};
 export default suppoter;
