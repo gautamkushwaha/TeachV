@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Switch, Redirect, Routes } from 'react-router-dom';
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import StudentDash from "./pages/StudentDash";
 import EnterEmail from "./pages/forgotPassword/EnterEmail";
 import EnterPassword from "./pages/forgotPassword/EnterPassword";
@@ -21,7 +21,13 @@ import AddCourse from "./Components/Admin/addCourse";
 import GetCourses from "./pages/GetCourses";
 import CoursePage from "./pages/CoursePage";
 import NotFoundPage from "./pages/NotFoundPage";
+import Home from "./new-Components/home";
+import Login from "./new-Components/signin";
 
+import Mentor from "./new-Components/join/mentor";
+import Suppoter from "./new-Components/join/suppoter";
+import Volunteer from "./new-Components/join/volunteer";
+import Contact from "./new-Components/contactUS";
 
 
 
@@ -32,7 +38,7 @@ const App = () => {
 
 <>
      <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
 
 
       <Routes>
@@ -40,22 +46,18 @@ const App = () => {
     
         {/* Temporary pages */}
       <Route path="/addCourse" element={<AddCourse />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route path="/studentdashboard" element={<StudentDash />} />
         <Route path="/ForgotPassword/Email" element={<EnterEmail/>} />
         <Route path="/ForgotPassword/Password" element={<EnterPassword/>} />
         <Route path="/ForgotPassword/otp" element={<EnterOtp/>} />
 
-        {/* Need some changes */}
-        <Route path="/" element={<Home />} />
+        {/* Need some changes (Made Using Locofy)*/}
         <Route path="/registration" element={<Registration/>}/>
         <Route path="/courses/webdev" element={<Webdev/>}/>
         <Route path="/collaborations/sponsers" element={<Sponsers/>}/>
         <Route path="/blog" element={<Blog/>}/>
         <Route path="/fullblog" element={<Fullblog/>}/>
-
         {/* Wrong dimentions */}
         <Route path="/mycourses" element={<Mycourses/>}/>
         <Route path="/myprojects" element={<Myprojects/>}/>
@@ -66,6 +68,22 @@ const App = () => {
         <Route path="*" element={<NotFoundPage/>}/>
 
         {/* <Route component={NotFoundPage} /> */}
+        <Route path="/login" element={<Login/>}/>   
+
+
+
+
+
+
+        {/* Designing Done From Scratch */}
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/join/mentor" element={<Mentor/>}/>
+        <Route path="/join/suppoter" element={<Suppoter/>}/>
+        <Route path="/join/volunteer" element={<Volunteer/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+
+
 
        
 
@@ -74,7 +92,7 @@ const App = () => {
 
 
           </Routes>
-      <Footer/>
+      {/* <Footer/> */}
 
 
 
