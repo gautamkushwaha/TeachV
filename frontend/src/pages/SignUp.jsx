@@ -52,7 +52,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="bg-teal-100 h-full w-auto p-10">
+      <div className="bg-teal-100 h-full w-auto p-10  font-poppins">
         <div className="h-[450px] w-auto rounded-xl bg-slate-50 flex flex-row my-[55px] mx-[125px]">
           <img
             alt=""
@@ -60,7 +60,7 @@ const SignUp = () => {
             className="h-auto w-full pb-10 rounded-l-lg pl-0 ml-0"
           ></img>
           <div>
-            <h1 className=" px-[200px] py-[10px] font-Spinnaker text-xl font-extrabold">
+            <h1 className=" px-[200px] py-[10px] text-xl font-extrabold">
               CREATE NEW ACCOUNT
             </h1>
             <form className="px-[80px]" onSubmit={handleSubmit}>
@@ -71,12 +71,12 @@ const SignUp = () => {
                 required
                 type="text"
                 placeholder="FIRST NAME"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 placeholder:font-poppins"
               ></input>
               <input
                 type="text"
                 placeholder="LAST NAME"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px]"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px] placeholder:font-poppins"
               ></input>
               <input
                 name="email"
@@ -85,7 +85,7 @@ const SignUp = () => {
                 required
                 type="email"
                 placeholder="EMAIL"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 placeholder:font-poppins"
               ></input>
               <input
                 name="phone"
@@ -94,7 +94,7 @@ const SignUp = () => {
                 required
                 type="tel"
                 placeholder="PHONE NUMBER"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px]"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px] placeholder:font-poppins"
               ></input>
               <input
                 name="password"
@@ -112,7 +112,7 @@ const SignUp = () => {
                 required
                 type="password"
                 placeholder="REPEAT PASSWORD"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px]"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 ml-[50px] mb-[10px] placeholder:font-poppins"
               ></input>
               <input
                 name="college"
@@ -121,7 +121,7 @@ const SignUp = () => {
                 required
                 type="text"
                 placeholder="COLLEGE"
-                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5"
+                className="rounded-xl w-[200px] h-[40px] bg-zinc-200 px-5 placeholder:font-poppins"
               ></input>
               <input
                 name="place"
@@ -134,10 +134,12 @@ const SignUp = () => {
               ></input>
               <button
                 type="submit"
-                className=" h-[40px] w-[200px] bg-black rounded-full mt-[15px] ml-[30%] text-white font-TharLon text-sm">
-                CREATE ACCOUNT</button>
+                className=" h-[40px] w-[200px] bg-black rounded-full mt-[15px] ml-[30%] text-white font-poppins text-sm"
+              >
+                CREATE ACCOUNT
+              </button>
             </form>
-            <p className="ml-[37%] text-Stoke mt-[10px]">
+            <p className="ml-[37%] text-Stoke mt-[10px] font-poppins">
               Already a member?{" "}
               <a href="/signin" className="text-sky-500 no-underline">
                 {" "}

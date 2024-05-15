@@ -10,6 +10,8 @@ module.exports = {
           100: "#7d7d7d",
           200: "#2f2b36",
           300: "rgba(0, 0, 0, 0.1)",
+          1500: "#2F2B36",
+          1600: "#7D7D7D",
         },
         snow: "#fff8f5",
         darkcyan: "#009b9b",

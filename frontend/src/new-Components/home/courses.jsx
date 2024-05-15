@@ -2,7 +2,7 @@ const courses = () => {
     return (
       <>
         {/* Courses */}
-        <section className="top-[50px] w-full h-[500px] relative font-poppins border-solid border-t-2 border-t-zinc-100">
+        <section className="top-[50px] w-full h-[700px] relative font-poppins border-solid border-t-2 border-t-zinc-100">
           <h1 className="pl-[150px] font-bold text-[33px] pt-[40px] text-neutral-500">
             COURSES
           </h1>
