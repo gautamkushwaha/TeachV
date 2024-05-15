@@ -1,4 +1,4 @@
-// import Navbar from "./nav";
+import Navbar from "./nav";
 import Hero from "./home/hero";
 import About from "./home/about";
 import Join from "./home/join";
@@ -11,7 +11,7 @@ import Footer from "./footer";
 const home = () => {
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Hero/>
       <About/>
       <Join/>

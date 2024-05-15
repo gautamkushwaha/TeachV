@@ -1,8 +1,10 @@
+import Navbar from "../nav";
 import Footer from "../footer";
 
 const suppoter = () => {
   return (
     <>
+    <Navbar/>
       <div className="font-poppins mx-[9.5vw]">
         <h1 className="uppercase font-bold text-[2.75vw]">supporter</h1>
         <p className="-mt-[15px] capitalize text-[1.14vw]">

@@ -13,6 +13,8 @@ module.exports = {
           1500: "#2F2B36",
           1600: "#7D7D7D",
         },
+        bluish: "#003B7A",
+
         snow: "#fff8f5",
         darkcyan: "#009b9b",
         chocolate: "#ea6020",
