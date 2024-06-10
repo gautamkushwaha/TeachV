@@ -123,7 +123,7 @@ const SignIn = () => {
         Forgot Password !
       </button>
     </>
-  );
+      );
 };
 
 export default SignIn;

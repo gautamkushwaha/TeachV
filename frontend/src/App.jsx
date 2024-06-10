@@ -36,21 +36,6 @@ const App = () => {
         <Routes>
           {/* Temporary pages */}
 
-          {/* <Route path="/addCourse" element={<AddCourse />} /> */}
-          <Route
-            path="/addCourse"
-            element={
-              isLogged ? (
-                userDetails.isadmin ? (
-                  <AddCourse />
-                ) : (
-                  <AccessDenied />
-                )
-              ) : (
-                <SignIn />
-              )
-            }
-          />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/studentdashboard" element={<StudentDash />} />
@@ -78,6 +63,21 @@ const App = () => {
           {/* <Route path="/TestPath" element={Condition ? <MentroProfile/> : <StudentProfile/>} /> */}
 
           <Route path="/profile" element={<CheckProfile />} />
+     
+     
+          <Route
+            path="/addCourse"
+            element={
+              isLogged ? (
+                userDetails.isadmin ? (
+                  <AddCourse />
+                ) : (
+                  <AccessDenied />
+                )
+              ) : (
+                <SignIn />
+              ) }
+          />
 
           {/* <Route component={NotFoundPage} /> */}
         </Routes>

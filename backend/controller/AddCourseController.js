@@ -2,7 +2,7 @@ import CourseDB from "../DB/models/AddCourse_model.js";
 
 const AddCourseController = async (req, res) => {
   // console.log(req.body);
-  // console.log("hello world ");
+  // console.log("hello world ");         
 
   const {
     imgdownloadURL,
