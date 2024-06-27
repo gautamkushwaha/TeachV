@@ -14,6 +14,16 @@ module.exports = {
           1600: "#7D7D7D",
         },
         bluish: "#003B7A",
+        lightblue: "#698ECD",
+        yellowish: "#FFA500",
+        aquablue: "#008080",
+        grayish: "#F2F2F2",
+        blackish: "#333333",
+        greenish: "#077D45",
+        orangish: {
+          100: "#B33900",
+          200: "#FF5200",
+        },
 
         snow: "#fff8f5",
         darkcyan: "#009b9b",
@@ -29,6 +39,7 @@ module.exports = {
         poppins: "Poppins",
         "source-sans-3": "'Source Sans 3'",
         "space-grotesk": "'Space Grotesk'",
+        roboto: "Roboto",
       },
       borderRadius: {
         "8xs": "5px",
@@ -69,6 +80,13 @@ module.exports = {
       mq450: {
         raw: "screen and (max-width: 450px)",
       },
+
+      tablet: "640px",
+      // => @media (min-width: 640px) { ... }
+      laptop: "1024px",
+      // => @media (min-width: 1024px) { ... }
+      desktop: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
   },
   corePlugins: {
