@@ -7,14 +7,19 @@ const navbar = () => {
         viewBox="0 0 18 12"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="my-0.5 text-bluish ml-[10px]"
+        className="my-0.5 text-bluish ml-[10px] tablet:hidden"
       >
         <path
           d="M0 12H13V10H0V12ZM0 7H10V5H0V7ZM0 0V2H13V0H0ZM18 9.59L14.42 6L18 2.41L16.59 1L11.59 6L16.59 11L18 9.59Z"
           fill="#003E81"
         />
       </svg>
-      <h1 className="text-[16px] my-0 text-bluish">Teach Your Village</h1>
+      <h1 className="text-[16px] my-0 text-bluish laptop:text-[1.75vw]">Teach Your Village</h1>
+      <h1 className="text-bluish text-[1.15vw]  hidden laptop:block">COURSES 
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0.5L5 5.5L10 0.5H0Z" fill="#003B7A"/>
+        </svg>
+      </h1>
       <svg
         width="7"
         height="7"

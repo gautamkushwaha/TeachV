@@ -3,7 +3,7 @@ const categories = () => {
     <div className="bg-grayish border-y-black/10 border-x-transparent border-solid border-[0.5px]">
       <div className="px-[30px] py-[25px]">
         <h1 className="text-bluish font-bold text-[20px] font-poppins uppercase">
-          Explore Our Diverse <br></br> Course Categories
+          Explore Our Diverse Course Categories
         </h1>
         <p className="text-blackish font-inter text-[12px]">
           Welcome to our diverse course offerings, where your journey to
@@ -18,7 +18,7 @@ const categories = () => {
         </p>
         <div className="flex flex-wrap justify-around">
           {/* java */}
-          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px]">
+          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px] tablet:w-[250px]">
             <img
               src="./home/java.png"
               alt="java"
@@ -43,7 +43,7 @@ const categories = () => {
           </div>
 
           {/* Python */}
-          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px]">
+          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px] tablet:w-[250px]">
             <img
               src="./home/python.png"
               alt="java"
@@ -67,7 +67,7 @@ const categories = () => {
           </div>
 
           {/* Artificial Intelligence */}
-          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px]">
+          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px]  tablet:w-[250px]">
             <svg
               width="64"
               height="47"
@@ -101,7 +101,7 @@ const categories = () => {
           </div>
 
           {/* DataBase */}
-          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px]">
+          <div className="relative w-[292px] h-[211px] border-solid border-[1px] border-bluish rounded-[15px] pt-[47px] px-4 pb-4 mt-[60px] tablet:w-[250px]">
             <svg
               width="84"
               height="64"
@@ -142,7 +142,7 @@ const categories = () => {
             </a>
           </div>
         </div>{" "}
-        <button className="w-[93px] h-[21px] py-[7px] px-[15px] flex uppercase rounded-full text-aquablue bg-transparant mx-[35%] mt-4 border-solid border-[0.5px] border-aquablue items-center">
+        <button className="px-[15px] flex uppercase rounded-full text-aquablue bg-transparant mt-4 border-solid border-[0.5px] border-aquablue items-center mx-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="6.25"

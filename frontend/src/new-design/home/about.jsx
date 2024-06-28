@@ -4,9 +4,9 @@ const about = () => {
       <div className="p-[30px]">
         <h1 className="font-poppins text-[20px] font-bold text-bluish m-0 uppercase">about us</h1>
         <h3 className="font-poppins text-[14px] font-normal text-aquablue m-0 capitalize">
-          we provide professional solutions <br /> to deliver safe & efficient projects
+          we provide professional solutions to deliver safe & efficient projects
         </h3>
-        <img src="./home/about.png" alt="about" className="h-[165px] w-full"/>
+        <img src="./home/about.png" alt="about" className="h-[165px] w-full tablet:my-3 tablet:h-auto tablet:w-3/5 tablet:mx-[20%]"/>
         <p className="font-poppins text-[14px] font-normal text-blackish m-0 capitalize">
           this is the space to introduce visitors to the businesses or brand.
           briefly explain who’s behind it.
