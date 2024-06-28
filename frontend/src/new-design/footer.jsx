@@ -8,9 +8,9 @@ const footer = () => {
         this is the space to introduce visitors to the businesses or brand.
       </p>
 
-      <div className="text-white font-poppins ">
+      <div className="text-white font-poppins flex flex-wrap tablet:justify-between">
         {/* information */}
-        <div className="mr-7">
+        <div className="mr-10 tablet:mr-0">
           {/* get in touch */}
           <h2 className="font-[500] text-[16px]">GET IN TOUCH</h2>
           <div className="flex items-center space-x-1">
@@ -24,8 +24,6 @@ const footer = () => {
               <path
                 d="M1.725 1.08333C1.75 1.45417 1.8125 1.81667 1.9125 2.1625L1.4125 2.6625C1.24167 2.1625 1.13333 1.63333 1.09583 1.08333H1.725ZM5.83333 6.09167C6.1875 6.19167 6.55 6.25417 6.91667 6.27917V6.9C6.36667 6.8625 5.8375 6.75417 5.33333 6.5875L5.83333 6.09167ZM2.125 0.25H0.666667C0.4375 0.25 0.25 0.4375 0.25 0.666667C0.25 4.57917 3.42083 7.75 7.33333 7.75C7.5625 7.75 7.75 7.5625 7.75 7.33333V5.87917C7.75 5.65 7.5625 5.4625 7.33333 5.4625C6.81667 5.4625 6.3125 5.37917 5.84583 5.225C5.80417 5.20833 5.75833 5.20417 5.71667 5.20417C5.60833 5.20417 5.50417 5.24583 5.42083 5.325L4.50417 6.24167C3.325 5.6375 2.35833 4.675 1.75833 3.49583L2.675 2.57917C2.79167 2.4625 2.825 2.3 2.77917 2.15417C2.625 1.6875 2.54167 1.1875 2.54167 0.666667C2.54167 0.4375 2.35417 0.25 2.125 0.25Z"
                 fill="white"
-
-
               />
             </svg>
             <p className="font-normal text-[12px] m-0">+91 5693696408</p>
@@ -69,11 +67,9 @@ const footer = () => {
             <p className="font-normal text-[12px] m-0">DIGIFAC First Floor</p>
           </div>
         </div>
-      </div>
 
-      <div className="text-white font-poppins flex flex-wrap">
         {/* HOME */}
-        <div className="text-center mr-5 my-5">
+        <div className="tablet:mr-0 tablet:mt-4 text-center mr-5 my-5">
           <h3 className="font-[500] text-[16px] p-0 m-0">HOME</h3>
           <div className="flex flex-col">
             <a
@@ -104,7 +100,7 @@ const footer = () => {
         </div>
 
         {/* COURSES */}
-        <div className="text-center mr-5 my-5">
+        <div className="tablet:mr-0 tablet:mt-4 text-center mr-5 my-5">
           <h3 className="font-[500] text-[16px] p-0 m-0">COURSES</h3>
           <div className="flex flex-col">
             <a
@@ -135,7 +131,7 @@ const footer = () => {
         </div>
 
         {/* JOIN US */}
-        <div className="text-center  my-5">
+        <div className="tablet:mr-0 tablet:mt-4 text-center  my-5">
           <h3 className="font-[500] text-[16px] p-0 m-0">JOIN US</h3>
           <div className="flex flex-col">
             <a
@@ -159,7 +155,7 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <p className="px-[15%] font-poppins text-white text-[12px] mt-0">
+      <p className=" font-poppins text-white text-[12px] mt-0 text-center">
         © 2024 EDPark, All Rights Reserved.
       </p>
     </div>
