@@ -23,7 +23,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Login from "./new-Components/signin";
 
 
-import Home from "./new-Components/home";
+import Home from "./new-design/home";
 import SignUp from "./pages/SignUp";
 import Contact from "./new-Components/contactUS";
 import Mentor from "./new-Components/join/mentor";
